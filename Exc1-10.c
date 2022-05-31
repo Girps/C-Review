@@ -2,35 +2,29 @@
 #include <stdlib.h>
 
 /*
-    Ex1-10
-    Write a program to copy its input to its output, replacing each
-        string of \t,\b and each backslash by \\
+    Ex1-12
+    Write a program that prints its input one word per line.
 */
 
 
 int main()
 {
+    int nw = 0;
     int c = 0;
-
-    // Check if end of file
-    while((c = getchar()) != EOF  )
+    // Check if EOF is reached
+    while( (c = getchar() ) != EOF)
+    {
+        // Check if ' ' is reached if so always place a newline
+        if(c == ' ')
+            {
+                putchar('\n');
+            }
+        else    // Only print and put char on stream if not space
         {
-            if(c == '\t')
-                {
-                    putchar('\\');
-                    putchar('t');
-                }
-            else if(c == 8) //
-                {
-                    putchar('\\b');
-
-                }
-            else if(c == '\\')
-                {
-                    putchar('\\');
-                }
                 putchar(c);
         }
+
+    }
 
 
     return 0;
