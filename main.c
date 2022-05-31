@@ -9,6 +9,9 @@ int myStrcmp(char* des, char* src);
 
 int main()
 {
+
+
+
     // With C strings it is the programmers responsibilty to keep track of the size of our arrays
         char greet[] = {"hello"};
         char cpy[6];
